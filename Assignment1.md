@@ -1,1 +1,0 @@
-[Laptop Screenshot](Assignment1/images/laptop-screenshot.png)
