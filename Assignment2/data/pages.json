@@ -1,0 +1,24 @@
+{
+  "pages":
+  [
+    {
+      "name": "Main",
+      "title": "Welcome to Katzelog!"
+    },
+    {
+      "name": "Profiles",
+      "title": "Teh Kittehs under Care",
+      "isDefault": true
+    },
+    {
+      "name": "Tasks",
+      "title": "Current TODOs for teh Kittehs"
+    },
+    {
+      "name": "About",
+      "title": "A Little Something Something about Katzelog...",
+      "summary": "Katzelog is an app that aims to help cat fosters and caretakers care for their cats.",
+      "text": "Katzelog itself is an idea for a suite of apps used in all aspects of cat rescue, from trapping to the adoption process. From trapping to intake to foster care to the adoption process and points between.\nKatzelog is the brain child of Mike McLaughlin. He has several cats of his own, as well as fosters numerous cats for Community Cat Club. He also helps out with Pennsauken Community Cats."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "organizations":
+  [
+    {
+      "id": 1,
+      "type": "n/a",
+      "name": "Pennsauken Community Cats",
+      "nameShort": "PCC",
+      "address1": "5026 Woodbine Avenue",
+      "address2": "",
+      "city": "Pennsauken",
+      "state": "New Jersey",
+      "stateShort": "NJ",
+      "postalCode": "08109",
+      "contactName": "Jackie Casey"
+    },
+    {
+      "id": 2,
+      "type": "Rescue",
+      "name": "Community Cat Club",
+      "nameShort": "CCC",
+      "address1": "352 Anthony Drive",
+      "address2": "",
+      "city": "Bellmawr",
+      "state": "New Jersey",
+      "stateShort": "NJ",
+      "postalCode": "08031",
+      "contactName": "Sara Sharp"
+    }
+  ]
+}
