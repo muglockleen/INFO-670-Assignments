@@ -1,15 +1,37 @@
-import { Text, SafeAreaView, View } from 'react-native';
-import styles from './assets/mpm-styles'
+import React, { useState, useEffect } from 'react';
+import { SafeAreaView } from 'react-native';
+import TitleBar from './layouts/TitleBar';
+import Controls from './layouts/Controls';
+import Kittehs from './layouts/Kittehs';
+import { mainStyles } from './assets/mpm-styles';
 
 export default function App() {
+  const [kittehs, setKittehs] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = require('./data/cats.json');
+        setKittehs(data.cats);
+      } catch (error) {
+        console.error("Error reading JSON file:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const addKitteh = (kitteh) => {
+//    const fs = require('fs');
+    setKittehs([...kittehs, kitteh]);
+//    fs.writeFileSync('./data/cats.json', JSON.stringify({ cats: kittehs}));
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.headerText}>Zekish's Assignment 2 List of Kittehs!</Text>
-      </View>
-      <View style={styles.content}>
-        <Text>Do You See Meeeeeeeeeeee?</Text>
-      </View>
+    <SafeAreaView style={ mainStyles.container }>
+      <TitleBar />
+      <Controls kittehWasAdded={ addKitteh } />
+      <Kittehs kittehs={ kittehs } />
     </SafeAreaView>
   );
 }
