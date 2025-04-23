@@ -16,12 +16,12 @@ This list is simple. You add a cat by name and an optional short description of 
 The user can only add a cat, by clicking on the "+" button, if the name field has text in it.
 
 Screenshot of adding a cat:
-[Add Cat Screenshot](./Assignment2/data/images/Kitteh-Add-Cat.png)
+[Add Cat Screenshot](./Assignment2/data/images/Kitteh-List-Add-Cat.png)
 
 And after the cat has been added:
-[Cat Added Screenshot](./Assignment2/data/images/Kitteh-Cat-Added.png)
+[Cat Added Screenshot](./Assignment2/data/images/Kitteh-List-Cat-Added.png)
 
 Removing a cat from the list is accomplished by clicking on the "-" button next to the cat to be removed. An alert box is displayed to confirm the deletion.
 
 Screenshot of the alert box:
-[Confirm Removal Screenshot](./Assignment2/data/images/Kitteh-Confirm-Removal.png)
+[Confirm Removal Screenshot](./Assignment2/data/images/Kitteh-List-Confirm-Removal.png)
