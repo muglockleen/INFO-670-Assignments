@@ -3,7 +3,7 @@ import { Keyboard, TextInput, Text, View, TouchableOpacity } from 'react-native'
 import { controlStyles } from "../assets/mpm-styles";
 
 export default function Controls({ kittehWasAdded }) {
-  const defaultKitteh = { name: '', summary: '' };
+  const defaultKitteh = { id: 0, name: '', summary: '' };
   const [kitteh, setKitteh] = useState(defaultKitteh)
 
   const nameWasChanged = (text) => {

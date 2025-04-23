@@ -4,6 +4,7 @@ import TitleBar from './layouts/TitleBar';
 import Controls from './layouts/Controls';
 import Kittehs from './layouts/Kittehs';
 import { mainStyles } from './assets/mpm-styles';
+import { createNewIdFrom } from './utilites/utils';
 
 export default function App() {
   const [kittehs, setKittehs] = useState([]);
@@ -23,6 +24,8 @@ export default function App() {
 
   const addKitteh = (kitteh) => {
 //    const fs = require('fs');
+    kitteh.id = createNewIdFrom(kittehs);
+    console.log(`Created new Kitteh Id: ${kitteh.id}`);
     setKittehs([...kittehs, kitteh]);
 //    fs.writeFileSync('./data/cats.json', JSON.stringify({ cats: kittehs}));
   }
