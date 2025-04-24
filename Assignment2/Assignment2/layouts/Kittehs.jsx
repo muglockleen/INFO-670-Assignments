@@ -13,7 +13,7 @@ export default function Kittehs({ kittehs }) {
 
   return (
     <View style={ listStyles.container }>
-      <ScrollView style={ listStyles.content }>
+      <ScrollView contentContainerStyle={ listStyles.content }>
         <Text style={ listStyles.text }>Teh Rezident Kittehs!</Text>
         { kittehs.map((value, index) => (
           <Kitteh key={ index } kitteh={ value } removeKitteh={ onRemoveKitteh }></Kitteh>

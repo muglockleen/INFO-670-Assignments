@@ -121,7 +121,8 @@ export const listStyles = StyleSheet.create({
     backgroundColor: '#d1dddb',
     padding: 10,
     borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20
+    borderBottomRightRadius: 20,
+    paddingBottom: 10
   },
 
   text: {
