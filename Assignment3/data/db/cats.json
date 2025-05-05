@@ -1,0 +1,291 @@
+{
+  "cats":
+  [
+    {
+      "id": 1,
+      "microchipNumber": 0,
+      "name": "BBQ",
+      "summary": "I am BBQ! I hiss a lot but love Churus!",
+      "bio": "I am BBQ! I hiss a lot but love Churus! I am bonded with my brother, Buffalo Sauce. I love to play with other kitties!",
+      "primaryImageId": 0,
+      "images":
+      [
+        {
+          "id": 0,
+          "title": "BBQ",
+          "source": "BBQ.jpg"
+        }
+      ],
+      "dateFound": null,
+      "dateIntake": "2023-10-10",
+      "dateAltered": "2023-10-10",
+      "isAltered": true,
+      "color": "Brown Tabby",
+      "breed": "DSH",
+      "gender": "female",
+      "weightPounds": 8.0,
+      "ageYears": 1.5,
+      "isEarTipped": true,
+      "hasBiteHistory": false,
+      "isCatFriendly": true,
+      "isDogFriendly": null,
+      "socialLevel": 6,
+      "medical":
+      {
+        "isFivPositive": false,
+        "vaccinations":
+        [
+          {
+            "type": "rabies",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          },
+          {
+            "type": "FeLV/FIV Combo",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          }
+        ]
+      },
+      "organizations":
+      [
+        {
+          "id": 1,
+          "name": "Pennsauken Community Cats",
+          "nameShort": "PCC"
+        },
+        {
+          "id": 2,
+          "name": "Community Cat Club",
+          "nameShort": "CCC",
+          "isFoster": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "microchipNumber": 0,
+      "name": "Buffalo Sauce",
+      "summary": "I am Buffalo Sauce! I am a bit shy but love Churus!",
+      "bio": "I am Buffalo Sauce! I am a bit shy but love Churus! I am bonded with my sister, BBQ. I love to play with other kitties!",
+      "primaryImageId": 0,
+      "images":
+      [
+        {
+          "id": 0,
+          "title": "Buffalo Sauce",
+          "source": "Buffalo_Sauce.jpg"
+        }
+      ],
+      "dateFound": null,
+      "dateIntake": "2023-10-10",
+      "dateAltered": "2023-10-10",
+      "isAltered": true,
+      "color": "Brown Tabby",
+      "breed": "DSH",
+      "gender": "male",
+      "weightPounds": 8.0,
+      "ageYears": 1.5,
+      "isEarTipped": true,
+      "hasBiteHistory": false,
+      "isCatFriendly": true,
+      "isDogFriendly": null,
+      "socialLevel": 7,
+      "medical":
+      {
+        "isFivPositive": false,
+        "vaccinations":
+        [
+          {
+            "type": "rabies",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          },
+          {
+            "type": "FeLV/FIV Combo",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          }
+        ]
+      },
+      "organizations":
+      [
+        {
+          "id": 1,
+          "name": "Pennsauken Community Cats",
+          "nameShort": "PCC"
+        },
+        {
+          "id": 2,
+          "name": "Community Cat Club",
+          "nameShort": "CCC",
+          "isFoster": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "microchipNumber": 933000320889523,
+      "name": "Stormy",
+      "summary": "I am Stormy! I am sooooo affectionate!",
+      "bio": "I am Stormy! I am so affectionate and love to cuddle! I like other kitties and am very firndly with hoomans, too!",
+      "primaryImageId": 0,
+      "images":
+      [
+        {
+          "id": 0,
+          "title": "Stormy",
+          "source": "Stormy.jpg"
+        }
+      ],
+      "dateFound": null,
+      "dateIntake": "2023-10-10",
+      "dateAltered": "2023-10-10",
+      "isAltered": true,
+      "color": "Black/White",
+      "breed": "DSH",
+      "gender": "male",
+      "weightPounds": 14.5,
+      "ageYears": 4,
+      "isEarTipped": true,
+      "hasBiteHistory": false,
+      "isCatFriendly": true,
+      "isDogFriendly": null,
+      "socialLevel": 10,
+      "medical":
+      {
+        "isFivPositive": true,
+        "medications":
+        [
+          {
+            "name": "Doxycycline",
+            "startDate": "2025-02-23",
+            "stopDate": "2025-03-08",
+            "doseAmount": "xx mL",
+            "doseLog":
+            [
+              {
+                "dateTime": "2025-02-23T21:00:00"
+              },
+              {
+                "dateTime": "2025-02-24T07:00:00"
+              },
+              {
+                "dateTime": "2025-02-24T21:00:00"
+              },
+              {
+                "dateTime": "2025-02-25T07:00:00"
+              },
+              {
+                "dateTime": "2025-02-25T21:00:00"
+              },
+              {
+                "dateTime": "2025-02-26T07:00:00"
+              }
+            ]            
+          }
+        ],
+        "currentIssues":
+        [
+          {
+            "description": "Heart murmur (Grade 2)"
+          },
+          {
+            "description": "Chronic cough"
+          },
+          {
+            "description": "Cloudy X-Rays."
+          }
+        ],
+        "pastIssues":
+        [
+          {
+            "description": "Ring worm"
+          }
+        ],
+        "vaccinations":
+        [
+          {
+            "type": "rabies",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          },
+          {
+            "type": "FeLV/FIV Combo",
+            "date": "2023-10-10",
+            "reVaxDate": "2024-10-10"
+          }
+        ]
+      },
+      "organizations":
+      [
+        {
+          "id": 1,
+          "name": "Pennsauken Community Cats",
+          "nameShort": "PCC"
+        },
+        {
+          "id": 2,
+          "name": "Community Cat Club",
+          "nameShort": "CCC",
+          "isFoster": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "microchipNumber": 0,
+      "name": "Buddy Junior",
+      "summary": "I am Buddy Junior! I am trying to find my courage to accept hoomans as my friends.",
+      "bio": "I am Buddy Junior! I am trying to find my courage to accept hoomans as my friends.",
+      "primaryImageId": 0,
+      "images":
+      [
+        {
+          "id": 0,
+          "title": "Buddy Junior",
+          "source": "Buddy_Junior.jpg"
+        }
+      ],
+      "dateFound": "2025-03-14",
+      "dateIntake": null,
+      "dateAltered": null,
+      "isAltered": true,
+      "color": "Orange and White",
+      "breed": "DSH",
+      "gender": "male",
+      "weightPounds": 10.0,
+      "ageYears": null,
+      "isEarTipped": true,
+      "hasBiteHistory": false,
+      "isCatFriendly": null,
+      "isDogFriendly": null,
+      "socialLevel": 5,
+      "medical":
+      {
+        "isFivPositive": false,
+        "vaccinations":
+        [
+          {
+            "type": "rabies",
+            "date": "2025-02-17",
+            "reVaxDate": "2026-02-17"
+          },
+          {
+            "type": "FeLV/FIV Combo",
+            "date": "2025-02-17",
+            "reVaxDate": "2026-02-17"
+          }
+        ]
+      },
+      "organizations":
+      [
+        {
+          "id": 2,
+          "name": "Community Cat Club",
+          "nameShort": "CCC"
+        }
+      ]
+    }
+  ]
+}
