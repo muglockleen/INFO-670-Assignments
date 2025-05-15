@@ -234,33 +234,60 @@
     },
     {
       "id": 4,
-      "microchipNumber": 0,
+      "microchipNumber": 933000321239928,
       "name": "Buddy Junior",
       "summary": "I am Buddy Junior! I am trying to find my courage to accept hoomans as my friends.",
       "bio": "I am Buddy Junior! I am trying to find my courage to accept hoomans as my friends.",
-      "primaryImageId": 0,
+      "primaryImageId": 4,
       "images":
       [
         {
-          "id": 0,
+          "id": 4,
           "title": "Buddy Junior",
-          "source": "Buddy_Junior.jpg"
+          "summary": "I Iz Handsum Fella?",
+          "source": "4_4.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Buddy Junior",
+          "summary": "Foster Kitteh Seez Joo!",
+          "source": "4_3.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Buddy Junior",
+          "summary": "Letz Me Outta Heer!",
+          "source": "4_2.jpg"
+        },
+        {
+          "id": 1,
+          "title": "Buddy Junior",
+          "summary": "I meenz It! Letz Me Outta Heer!",
+          "source": "4_1.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Buddy Junior",
+          "summary": "Cozy Kave!",
+          "source": "4_5.jpg"
         }
       ],
       "dateFound": "2025-03-14",
-      "dateIntake": null,
-      "dateAltered": null,
+      "dateIntake": "2025-02-10",
+      "dateAltered": "2025-02-10",
       "isAltered": true,
       "color": "Orange and White",
       "breed": "DSH",
       "gender": "male",
       "weightPounds": 10.0,
-      "ageYears": null,
+      "ageYears": 3,
       "isEarTipped": true,
       "hasBiteHistory": false,
       "isCatFriendly": null,
       "isDogFriendly": null,
       "socialLevel": 5,
+      "rabiesVaxDate": "2025-02-10",
+      "comboVaxDate": "2025-02-10",
       "medical":
       {
         "isFivPositive": false,
@@ -268,13 +295,13 @@
         [
           {
             "type": "rabies",
-            "date": "2025-02-17",
-            "reVaxDate": "2026-02-17"
+            "date": "2025-02-10",
+            "reVaxDate": "2026-02-10"
           },
           {
             "type": "FeLV/FIV Combo",
-            "date": "2025-02-17",
-            "reVaxDate": "2026-02-17"
+            "date": "2025-02-10",
+            "reVaxDate": "2026-02-10"
           }
         ]
       },
