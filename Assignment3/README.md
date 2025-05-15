@@ -12,13 +12,13 @@ The app has three main functions, implemented as three separate screens.
 * **Profile Screen** - This screen displays basic profile information for the cat. It is accessed by clicking on the *Profile* button in the top menu bar. Editing values will toggle the *Save* button to an enabled state so the user can save the data to disk. Well, it would if it worked. The save functionality is not implemented. The ability to save data on a local file system in an Expo project still eludes me.
 There are a few features I did not have time to research/implement:
 
-    ** ***Date Picker*** - Ideally, a date picker will be added to allow easier selection of dates, along with the input fields. There is basic validation using the Javascript Date class but that's it.
+    ***Date Picker*** - Ideally, a date picker will be added to allow easier selection of dates, along with the input fields. There is basic validation using the Javascript Date class but that's it.
 
-    ** ***Scanner Input*** - The text inputs probably need to be adjusted not to handle every change in text because scanning the microchip number directly into the text input from a USB scanner does not work. It is likely a throttling issue with the scanner sending too many digits too fast.
+    ***Scanner Input*** - The text inputs probably need to be adjusted not to handle every change in text because scanning the microchip number directly into the text input from a USB scanner does not work. It is likely a throttling issue with the scanner sending too many digits too fast.
 
-    ** ***Save Data*** - As stated above, the profile data can not be persisted.
+    ***Save Data*** - As stated above, the profile data can not be persisted.
 
-    ** ***Easier Data Input*** - Currently, the keyboard blocks parts of the GUI. A manner of focusing the input being typed needs to be realized.
+    ***Easier Data Input*** - Currently, the keyboard blocks parts of the GUI. A manner of focusing the input being typed needs to be realized.
 
 [Profile Screen](./data/images/Profile_Screen.png)
 
