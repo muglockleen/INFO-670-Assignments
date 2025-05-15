@@ -18,14 +18,10 @@ There are a few features I did not have time to research/implement:
 
 [Profile Screen](./data/images/Profile_Screen.png)
 
-* **Image Gallery**
-
-The image gallery displays thumbnail images of the cat. Due to the inability to dynamically construct image paths and filenames and laod them via calls to *require(...)*, a hack was used to list the filenames in an object. Ultimately, images will need to be uploaded to a server and stored along with a database. Clicking on an image brings up the full sized picture. Accessing the gallery is accomplished by clicking on the *Gallery* button in the top menu bar.
+* **Image Gallery** - The image gallery displays thumbnail images of the cat. Due to the inability to dynamically construct image paths and filenames and laod them via calls to *require(...)*, a hack was used to list the filenames in an object. Ultimately, images will need to be uploaded to a server and stored along with a database. Clicking on an image brings up the full sized picture. Accessing the gallery is accomplished by clicking on the *Gallery* button in the top menu bar.
 
 [Image Gallery](./data/images/Gallery.png)
 
-* **Full Picture Viewer**
-
-To view a full sized picture, the user simply clicks on a thumbnail image in the gallery.
+* **Full Picture Viewer** - To view a full sized picture, the user simply clicks on a thumbnail image in the gallery.
 
 [Picture Viewer](./data/images/Full_Pic.png)
