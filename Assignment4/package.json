@@ -1,0 +1,27 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "proxy": "http://localhost:8081",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~5.0.4",
+    "@react-native-picker/picker": "^2.11.0",
+    "cors": "^2.8.5",
+    "expo": "~53.0.9",
+    "expo-status-bar": "~2.2.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.2",
+    "react-native-web": "^0.20.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
