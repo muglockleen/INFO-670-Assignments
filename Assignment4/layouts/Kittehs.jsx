@@ -22,31 +22,40 @@ export default function Kittehs({ kittehs }) {
         }
       </ScrollView>
       </View>
-  );
+    );
   } catch (error) {
-    return (<></>);
+    return (
+      // <View>
+      //   <Text>{ error.toString() }</Text>
+      // </View>
+      <></>
+    );
   }
 }
 
 function confirmRemoval( kittehs, name, id, setUpdate, update ) {
-  Alert.alert(
-    `Remove Kitteh from the List`,
-    `Joo Reelly Wantz to Remuv ${name}?`,
-    [
-      {
-        text: 'Yes',
-        onPress: () => {
-          removeKitteh(kittehs, id);
-          setUpdate(!update);
-        }
-      },
-      {
-        text: "No",
-        onPress: () => console.log("Kitteh Removal Canceled")
-      },
-    ],
-    {
-      cancelable: true,
-    }
-  );
+  // TODO(MPM): The web view does not show the alert.
+  removeKitteh(id);
+  setUpdate(!update);
+
+  // Alert.alert(
+  //   `Remove Kitteh from the List`,
+  //   `Joo Reelly Wantz to Remuv ${name}?`,
+  //   [
+  //     {
+  //       text: 'Yes',
+  //       onPress: () => {
+  //         removeKitteh(id);
+  //         setUpdate(!update);
+  //       }
+  //     },
+  //     {
+  //       text: "No",
+  //       onPress: () => console.log("Kitteh Removal Canceled")
+  //     },
+  //   ],
+  //   {
+  //     cancelable: true,
+  //   }
+  // );
 };

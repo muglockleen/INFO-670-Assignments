@@ -6,9 +6,14 @@ export const getCatsFromRepository = async () => {
         url,
         { method: 'GET' }
     );
-    console.log(`Got response. Getting response.json...`);
-    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(`Get Kittehs HTTP Error! Status: ${response.status}`);
+    } else {
+      console.log(`Got response. Getting response.json...`);
+    }
+    var data = await response.json();
     console.log(`Got response.json: ${data}`);
+    console.log(`REST data size is ${data.length}`);
     return data;
   } catch (error) {
     console.error("Get Kitteh(s) Network Error:", error);
@@ -27,12 +32,16 @@ export const addCatToRepository = async ( kitteh ) => {
         `${url}${query}`,
         { method: 'GET' }
     );
-    console.log(`Got response. Getting text...`);
+    if (!response.ok) {
+      throw new Error(`Add Kitteh HTTP Error! Status: ${response.status}`);
+    } else {
+      console.log(`Got response.`);
 
-    // TODO(MPM): Send response from PHP.
-    //const data = await response.text();
-    //console.log(`Got response. text: ${data}`);
-    //return data;
+      // TODO(MPM): Send response from PHP.
+      //const data = await response.text();
+      //console.log(`Got response. text: ${data}`);
+      //return data;
+    }
   } catch (error) {
     console.error("Add Kitteh Network Error:", error);
   }
@@ -47,12 +56,16 @@ export const removeKitteh = async ( id ) => {
         `${url}${query}`,
         { method: 'GET' }
     );
-    console.log(`Got response. Getting text...`);
+    if (!response.ok) {
+      throw new Error(`Remove Kitteh HTTP Error! Status: ${response.status}`);
+    } else {
+      console.log(`Got response.`);
 
-    // TODO(MPM): Send response from PHP.
-    //const data = await response.text();
-    //console.log(`Got response. text: ${data}`);
-    //return data;
+      // TODO(MPM): Send response from PHP.
+      //const data = await response.text();
+      //console.log(`Got response. text: ${data}`);
+      //return data;
+    }
   } catch (error) {
     console.error("Remove Kitteh Network Error:", error);
   }

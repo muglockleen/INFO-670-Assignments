@@ -10,9 +10,14 @@ export default function App() {
   const [kittehs, setKittehs] = useState([]);
 
   useEffect(() => {
-    const data = getCatsFromRepository();
-    setKittehs(data);
-    console.log(`App.js data: ${data}`);
+    (async () => {
+      const data = await getCatsFromRepository();
+      setKittehs(data);
+      console.log(`Kittehs size is ${kittehs.length}`);
+      for (var item of kittehs) {
+        console.log(`Kitteh ${item.name}`);
+      }
+    }) ();
   }, []);
 
   const addKitteh = (kitteh) => {

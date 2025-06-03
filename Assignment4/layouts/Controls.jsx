@@ -39,7 +39,6 @@ export default function Controls({ kittehWasAdded }) {
           placeholder={ defaultKitteh.name }
           value={ kitteh.name }
           onChangeText={ nameWasChanged }></TextInput>
-
         <Text style={ controlStyles.text }>Gender</Text>
         <View style={ controlStyles.input }>
           <Picker selectedValue={ kitteh.name }

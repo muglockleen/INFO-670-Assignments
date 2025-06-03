@@ -3,6 +3,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'On'); 
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
 $db_info = "sqlite:../databases/katzelog.db";
 $conn = new PDO($db_info);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -90,6 +94,8 @@ switch ($action) {
       $id = $_GET['id'];
       $sql = "DELETE FROM cats WHERE id == $id";
       $result = $conn->exec($sql);
+
+      // TODO(MPM): Send ack.
     }
   break;
   case "show":
