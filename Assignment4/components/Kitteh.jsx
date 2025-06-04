@@ -7,6 +7,10 @@ export default function Kitteh({ index, kitteh, removeKitteh }) {
   if (kitteh.summary) {
     name = `${kitteh.name} - `;
   }
+  var gender = `(${kitteh.gender}) `;
+  if (gender === 'Unknown') {
+    gender = '';
+  }
 
   return (
     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -19,7 +23,7 @@ export default function Kitteh({ index, kitteh, removeKitteh }) {
       </View>
       <View style={ itemStyles.content }>
          <Text key={ index } style={ itemStyles.title }>{ name }</Text>
-         <Text key={ index }>{ kitteh && kitteh.summary }</Text>
+         <Text key={ index }>{ gender } { kitteh && kitteh.summary }</Text>
       </View>
     </View>
   );
