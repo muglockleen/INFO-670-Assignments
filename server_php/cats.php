@@ -1,5 +1,7 @@
 <?php
 
+require("./db_utils.php");
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'On'); 
 
@@ -71,20 +73,20 @@ switch ($action) {
         $first = true;
         foreach ($string_params as $key => $value) {
           // Strings get quotes.
-          $first ? $key_value_pairs .= "'$key' = '$value'" : $key_value_pairs .= ", '$key' = '$value'";
+          $first ? $key_value_pairs .= "$key = '$value'" : $key_value_pairs .= ", $key = '$value'";
           $first = false;
         }
         foreach ($numeric_params as $key => $value) {
-          $first ? $key_value_pairs .= "'$key' = $value" : $key_value_pairs .= ", '$key' = $value";
+          $first ? $key_value_pairs .= "$key = $value" : $key_value_pairs .= ", $key = $value";
           // Numerics do not get quotes.
           $first = false;
         }
         // Now complete the query string.
-        $sql .= " $key_value_pairs WHERE id == $id";
-        // echo "UPDATE SQL: $sql";
+        $sql .= " $key_value_pairs WHERE id = $id";
         $result = $conn->exec($sql);
 
         // TODO(MPM): Send ack.
+        echo "$result - UPDATE SQL: $sql";
       }
     }
   break;
@@ -92,7 +94,7 @@ switch ($action) {
     // Delete a cat's record from the database.
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $sql = "DELETE FROM cats WHERE id == $id";
+      $sql = "DELETE FROM cats WHERE id = $id";
       $result = $conn->exec($sql);
 
       // TODO(MPM): Send ack.
@@ -102,23 +104,8 @@ switch ($action) {
     // Select all of a cat's fields for a profile view.
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $sql =
-        "SELECT cats.*, genders.gender
-         FROM cats, genders
-         WHERE cats.id == $id
-         AND cats.gender_id == genders.id";
+      $sql = "SELECT * FROM cats WHERE cats.id = $id";
       $data = $conn->query($sql);
-      // foreach ($data as $kitteh) {
-      //   echo "<p>[SHOW] Hello from "
-      //     . $kitteh['name']
-      //     . "! I am a "
-      //     . $kitteh['age_years']
-      //     . " year old "
-      //     . $kitteh['color']
-      //     . " "
-      //     . $kitteh['breed']
-      //     . " kitteh!</p>";
-      // }
       header("Content-Type: application/json");
       echo json_encode($data->fetchAll(PDO::FETCH_ASSOC));
     }
@@ -129,84 +116,15 @@ switch ($action) {
     // TODO(MPM): Implement a filter in the GUI.
     //            E.g., gender, age, color, which organization, ready to
     //            adopt, need vax, have upcoming vet appointment etc.
-    $sql = "SELECT cats.*, genders.gender FROM cats, genders";
+    $sql = "SELECT * FROM cats";
     if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $sql .= " WHERE cats.id == $id AND cats.gender_id == genders.id";
-    } else {
-      $sql .= " WHERE cats.gender_id == genders.id";
+      $sql .= " WHERE cats.id = $id";
     }
     // echo "LIST SQL:  $sql";
     $data = $conn->query($sql);
-    // foreach ($data as $kitteh) {
-    //    echo "<p> Hello from "
-    //      . $kitteh['name']
-    //      . "! I am a "
-    //      . $kitteh['age_years']
-    //      . " year old "
-    //      . $kitteh['gender']
-    //      . " "
-    //      . $kitteh['color']
-    //      . " "
-    //      . $kitteh['breed']
-    //      . " kitteh!</p>";
-    // }
-//    echo "<p>Hi!</p>";
     header("Content-Type: application/json");
     echo json_encode($data->fetchAll(PDO::FETCH_ASSOC));
   break;
-}
-
-function create_cat_params($param_type = 'string') {
-  $params = [];
-  foreach ($_GET as $key => $value) {
-    if (is_valid_cat_parameter($key, $param_type)) {
-      $params[$key] = $value;
-    }
-  }
-  return $params;
-}
-
-// TODO(MPM):
-// - Validate that each data type is correct
-// - Convert anything that can be to an explicit type/format for db insertion.
-// TODO(MPM): Perhaps define the database schema in an external file so we can
-//            parse and validate the fields? 
-function is_valid_cat_parameter($value, $param_type = 'string') {
-  switch ($param_type) {
-    case "string":
-    default:
-      switch ($value) {
-        case "name": // TEXT NOT NULL
-        case "color": // TEXT
-        case "breed": // TEXT
-        case "summary": // TEXT
-        case "bio": // TEXT
-          return true;
-        default:
-          return false;
-      }
-    break;
-    case "numeric":
-      switch ($value) {
-        case "microchip_number": // INTEGER
-        case "gender_id": // INTEGER
-        case "age_years": // DECIMAL
-        case "is_ear_tipped": // BOOLEAN (treated as NUMERIC in SQLite3?)
-        case "weight_pounds": // DECIMAL
-          return true;
-        default:
-          return false;
-      }
-    break;
-  }
-}
-
-function show_error($error) {
-  // TODO(MPM): Send a JSON object containing error info.
-  // It may be good to just have a function that returns a
-  // JSON object reporting information on the request, whatever
-  // it was.
-  echo "<p>$error</p>";
 }
 ?>

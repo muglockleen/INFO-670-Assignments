@@ -1,0 +1,18 @@
+{
+  "title": "Katzelog",
+  "kittehGenders":
+  [
+    {
+      "id": 0,
+      "gender": "Unknown"
+    },
+    {
+      "id": 1,
+      "gender": "Female"
+    },
+    {
+      "id": 2,
+      "gender": "Male"
+    }
+  ]
+}
