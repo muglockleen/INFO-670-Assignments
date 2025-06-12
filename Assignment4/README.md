@@ -15,7 +15,7 @@ The front end is a bit icky due to the web translation. A user can add a cat in 
 
 To remove a cat, the user clicks on the "-" button next to a cat in the list.
 
-[Screen Shot](./data/Main_Screen.png)
+[Screen Shot](./data/Screen_Shot.png)
 
 **APIs**
 
