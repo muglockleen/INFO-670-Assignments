@@ -42,6 +42,8 @@ The database schema, katzelog.sql (in the repository), can be found in the INFO-
 
 There is an app data JSON file in the assets folder, in which lives some rudimentory data for use in the code. Currently, it only has the cat genders and app title. In the future, it is planned to add as many text items in this file as possible such as button texts, page names, etc.
 
+A custom date selector component was created to wrap a date picker. Currently, the date text inputs are read only but plans are to allow editing in the text inputs directly, if desired.
+
 **Limitations / Known Bugs**
 
 * User can not currently add or view profile pics due to running out of time.
